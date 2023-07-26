@@ -16,7 +16,7 @@ public class FileUploadController {
         this.fileUploadService = fileUploadService;
     }
 
-    @PostMapping("/upload")
+    @PostMapping(value = "/upload", consumes = "multipart/form-data")
     public ResponseEntity<String> handleFileUpload(@RequestParam("file") MultipartFile file) {
         String fileId = fileUploadService.uploadFile(file);
         return ResponseEntity.ok("File uploaded successfully. File ID: " + fileId);

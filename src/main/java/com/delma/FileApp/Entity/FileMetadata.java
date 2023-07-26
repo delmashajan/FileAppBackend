@@ -1,6 +1,7 @@
 package com.delma.FileApp.Entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
+
 
 import java.util.Date;
 
